@@ -5,13 +5,13 @@ Collection of patterns written in Lua for the [ZC95 e-stim device](https://githu
 The scripts can be uploaded to the e-stim device via WiFi. [See documentation](https://github.com/CrashOverride85/zc95/blob/main/docs/RemoteAccess.md#lua_uploadpy).
 
 ## Phase 3
-This e-stim pattern consists of four distinct phases, each lasting for a specified duration (_initial_duration_sec or user-adjusted value) and broken into 100 gradual steps. The frequencies and pulse widths vary between each step, gradually transitioning from a starting value to an ending value within each phase. Each phase is designed to produce different sensations as it progresses through the steps, with each channel's frequency and pulse width being adjusted accordingly.
+This e-stim pattern consists of four distinct phases, each lasting for a specified duration (default is 60s, but can be adjusted) and broken into 100 gradual steps. The frequencies and pulse widths vary between each step, gradually transitioning from a starting value to an ending value within each phase. Each phase is designed to produce different sensations as it progresses through the steps, with each channel's frequency and pulse width being adjusted accordingly.
 
 The overall flow repeats indefinitely after completing all four phases.
 
-    Phase Duration: The default duration is 60 seconds per phase, adjustable from 10 to 240 seconds via the menu.
-    Steps per Phase: Each phase has 100 steps, ensuring smooth transitions in frequencies and pulse widths.
-    Phase Repetition: After Phase 4, the process loops back to Phase 1.
+* Phase Duration: The default duration is 60 seconds per phase, adjustable from 10 to 240 seconds via the menu.
+* Steps per Phase: Each phase has 100 steps, ensuring smooth transitions in frequencies and pulse widths.
+* Phase Repetition: After Phase 4, the process loops back to Phase 1.
 
 ### Phase Details
 | Phase | Frequency | Pulse Width | Description | Purpose |
