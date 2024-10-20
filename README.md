@@ -4,6 +4,13 @@ Collection of patterns written in Lua for the [ZC95 e-stim device](https://githu
 
 The scripts can be uploaded to the e-stim device via WiFi. [See documentation](https://github.com/CrashOverride85/zc95/blob/main/docs/RemoteAccess.md#lua_uploadpy).
 
+## Constant
+Gives you full manual control over a constant sensation.
+
+Frquency and pulse width (positive and negative) can be adjusted independently. Frquency from 5 to 300 Hz, positive and negative pulse width from 5 to 255 us.
+
+While it's technically not a pattern, this program can be very useful to determine specific frequencies and pulse widths to cause a desired sensation. Also it's useful if a constant stimulation is required.
+
 ## Phase 3
 This e-stim pattern consists of four distinct phases, each lasting for a specified duration (default is 60s, but can be adjusted) and broken into 100 gradual steps. The frequencies and pulse widths vary between each step, gradually transitioning from a starting value to an ending value within each phase. Each phase is designed to produce different sensations as it progresses through the steps, with each channel's frequency and pulse width being adjusted accordingly.
 
