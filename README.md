@@ -5,7 +5,7 @@ Collection of patterns written in Lua for the [ZC95 e-stim device](https://githu
 The scripts can be uploaded to the e-stim device via WiFi. [See documentation](https://github.com/CrashOverride85/zc95/blob/main/docs/RemoteAccess.md#lua_uploadpy).
 
 ## Constant
-Gives you full manual control over a constant sensation.
+Gives you full manual control over a constant sensation for all 4 channels equally.
 
 Frquency and pulse width (positive and negative) can be adjusted independently. Frquency from 5 to 300 Hz, positive and negative pulse width from 5 to 255 us.
 
