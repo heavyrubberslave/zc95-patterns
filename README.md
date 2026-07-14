@@ -4,6 +4,19 @@ Collection of patterns written in Lua for the [ZC95 e-stim device](https://githu
 
 The scripts can be uploaded to the e-stim device via WiFi. [See documentation](https://github.com/CrashOverride85/zc95/blob/main/docs/RemoteAccess.md#lua_uploadpy).
 
+```bash
+cd path/to/repo/of/zc95
+python3 -m venv venv
+source venv/bin/activate
+pip install websocket-client pyserial
+
+export ZC_IP=192.168.x.x
+
+python3 ./remote_access/pattern_list.py --debug --ip $ZC_IP
+python3 ./remote_access/lua_upload.py --ip $ZC_IP --script ../zc95-patterns/patterns/constant.lua --index 0
+python3 ./remote_access/lua_upload.py --ip $ZC_IP --script ../zc95-patterns/patterns/phase3.lua --index 1
+```
+
 ## Constant
 Gives you full manual control over a constant sensation for all 4 channels equally.
 
