@@ -9,9 +9,12 @@ cd path/to/repo/of/zc95
 python3 -m venv venv
 source venv/bin/activate
 pip install websocket-client pyserial
-python3 ./remote_access/pattern_list.py --debug --ip {box ip}
-python3 ./remote_access/lua_upload.py --ip 192.168.192.81 --script ../zc95-patterns/patterns/constant.lua --index 0
-python3 ./remote_access/lua_upload.py --ip 192.168.192.81 --script ../zc95-patterns/patterns/phase3.lua --index 1
+
+export ZC_IP=192.168.x.x
+
+python3 ./remote_access/pattern_list.py --debug --ip $ZC_IP
+python3 ./remote_access/lua_upload.py --ip $ZC_IP --script ../zc95-patterns/patterns/constant.lua --index 0
+python3 ./remote_access/lua_upload.py --ip $ZC_IP --script ../zc95-patterns/patterns/phase3.lua --index 1
 ```
 
 ## Constant
